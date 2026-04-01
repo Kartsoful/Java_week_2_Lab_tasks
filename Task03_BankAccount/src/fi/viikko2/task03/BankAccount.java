@@ -18,19 +18,69 @@
 package fi.viikko2.task03;
 
 public class BankAccount {
-   
+    private String accountNumber;
+    private double balance;
 
+    BankAccount(String id, double b) {
+        this.accountNumber = id;
+        if (b < 0) {
+            this.balance = 0.0;
+        } else {
+            this.balance = b;
+        }
+    }
+
+    public double deposit(double d) {
+        if (d <= 0) {
+            return balance;
+        } else {
+            this.balance = this.balance + d;
+            return balance;
+        }
+    }
+     
+    public double withdraw(double d) {
+        if (d > this.balance || d <= 0) {
+            return balance;
+        } else {
+            this.balance = this.balance - d;
+            return balance;
+        }
+    }
+    
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
 
 
     @Override
     public String toString(){
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement toString()");
+        return ("Bank ID: " + this.accountNumber + ". Balance: " + this.balance);
     }
 
     @Override
-    public boolean equals(Object o){
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement equals(Object)");
+    public boolean equals(Object o) {
+
+        if (this == o) {
+            return true;
+        }
+
+        if (o instanceof BankAccount) {
+
+            BankAccount other = (BankAccount) o;
+
+            if (this.accountNumber == other.getAccountNumber()) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
+            return false;
+        }
     }
 }

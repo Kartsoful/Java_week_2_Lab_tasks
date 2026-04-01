@@ -20,12 +20,16 @@ import fi.viikko2.task06.model.Vehicle;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Tehtävä 6: implementoi Vehicle ja SportsCar, huomioi näkyvyydet.");
-        // Vehicle v = new Vehicle("Generic", 10000);
-        // SportsCar sc = new SportsCar("FastBrand", 2000, 450);
-        // System.out.println(v);
-        // System.out.println(sc);
-        // sc.mileage = 500;   // EI KÄÄNNY: mileage on package-private eri paketissa
+        Vehicle v = new Vehicle("Generic", 10000);
+        SportsCar sc = new SportsCar("FastBrand", 2000, 450);
+        System.out.println(v);
+        // System.out.println(sc); 
+        /*
+        Herjaa että "The field Vehicle.mileage is not visible"
+        Pitäisi lisätä joko public tai protected, jotta näkyvyys menee myös aliluokalle.
+        Vaihtoehtoisesti private, mutta sitten pitäsi olla "getteri".
+        */
+        //sc.mileage = 500;   // EI KÄÄNNY: mileage on package-private eri paketissa
         // v.mileage = 12000;  // EI KÄÄNNY: sama syy
     }
 }

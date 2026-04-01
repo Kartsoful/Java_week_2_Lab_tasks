@@ -20,11 +20,37 @@ public class Employee {
     // TODO: protected String name;
     // TODO: public Employee(String name){ ... }
 
-    public double monthlyPay(){ return 0.0; }
+    protected String name;
+
+    public Employee(String n) {
+        this.name = n;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double monthlyPay() { 
+        return 0.0; 
+    }
 
     @Override
-    public String toString(){ throw new UnsupportedOperationException("TODO: implement toString()"); }
+    public String toString() { 
+        throw new UnsupportedOperationException("TODO: implement toString()");
+    }
 
     @Override
-    public boolean equals(Object o){ throw new UnsupportedOperationException("TODO: implement equals(Object)"); }
+    public boolean equals(Object o) { 
+        if (this == o) {
+            return true;
+        }
+
+        if (!(o instanceof Employee)) {
+            return false;
+        }
+
+        Employee other = (Employee) o;
+
+        return this.name == other.getName();
+    }
 }

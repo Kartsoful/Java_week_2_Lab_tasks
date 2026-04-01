@@ -21,10 +21,17 @@ import fi.viikko2.task06.model.Vehicle;
 
 public class SportsCar extends Vehicle {
    
+    int horsepower;
 
+    public SportsCar(String brand, int mileage, int horsepower) {
+        super(brand, mileage);
+        this.horsepower = horsepower;
+    }
 
     @Override
     public String toString(){ 
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement toString()"); }
+        return "Brand: " + this.brand +
+        "\n Mileage: " + this.getMileage() +
+        "\n Power: " + this.horsepower;
+    }
 }

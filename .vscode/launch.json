@@ -5,6 +5,48 @@
       "type": "java",
       "name": "Main",
       "request": "launch",
+      "mainClass": "fi.viikko2.task06.sub.Main",
+      "projectName": "java_viikko2_oop_student_skeleton_fixed_4d94b4f3"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "fi.viikko2.task05.Main",
+      "projectName": "java_viikko2_oop_student_skeleton_fixed_4d94b4f3"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "fi.viikko2.task04.Main",
+      "projectName": "java_viikko2_oop_student_skeleton_fixed_4d94b4f3"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "fi.viikko2.task03.Main",
+      "projectName": "java_viikko2_oop_student_skeleton_fixed_4d94b4f3"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "fi.viikko2.task02.Main",
+      "projectName": "java_viikko2_oop_student_skeleton_fixed_4d94b4f3"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "fi.viikko2.task01.Main",
+      "projectName": "java_viikko2_oop_student_skeleton_fixed_4d94b4f3"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
       "mainClass": "fi.viikko2.task01.Main",
       "projectName": "java_viikko2_oop_student_skeleton_fixed_dd3634b5"
     },

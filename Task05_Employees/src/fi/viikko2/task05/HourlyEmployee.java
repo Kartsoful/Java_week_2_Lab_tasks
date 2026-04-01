@@ -20,9 +20,28 @@ public class HourlyEmployee extends Employee {
     // TODO: private double hourlyRate; private double hoursPerMonth;
     // TODO: public HourlyEmployee(String name, double hourlyRate, double hoursPerMonth){ super(name); ... }
 
-    @Override
-    public double monthlyPay(){ throw new UnsupportedOperationException("TODO: implement monthlyPay()"); }
+    private double hoursPerMonth;
+    private double hourlyRate;
+
+    public HourlyEmployee(String name, double hourlyRate, double hoursPerMonth) {
+        super(name);
+
+        this.hoursPerMonth = hoursPerMonth;
+        this.hourlyRate = hourlyRate;
+    }
 
     @Override
-    public String toString(){ throw new UnsupportedOperationException("TODO: implement toString()"); }
+    public double monthlyPay(){
+        return hourlyRate * hoursPerMonth;
+    }
+
+    @Override
+    public String toString(){
+        double salary = monthlyPay();
+        return "Name: " + this.name +
+        "\n Type: Hourly Employee " +
+        "\n Hours: " + this.hoursPerMonth + 
+        "\n Hourly rate: " + this.hourlyRate + 
+        "\n Mothly salary: " + salary + "\n";
+    }
 }

@@ -23,6 +23,21 @@ public class Vehicle {
     // TODO: public Vehicle(String brand, int mileage){ ... }
     // TODO: public String getBrand(){ ... }
 
+    protected String brand;
+    int mileage;
+
+    public Vehicle(String brand, int mileage) {
+        this.brand = brand;
+        this.mileage = mileage;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
     @Override
-    public String toString(){ throw new UnsupportedOperationException("TODO: implement toString()"); }
+    public String toString(){ 
+        return "Brand: " + this.brand +
+        "\n Mileage: " + this.mileage;
+    }    
 }

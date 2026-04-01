@@ -20,18 +20,41 @@ public class Circle extends Shape {
     // TODO: private double radius;
     // TODO: public Circle(double radius) { ... }
 
-    @Override
-    public double area(){ 
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement area()"); }
+    private double radius;
+
+    Circle (double r) {
+        this.radius = r;
+    }
+
+    public double circum() {
+        return Math.PI * radius * 2;
+    }
 
     @Override
-    public String toString(){ 
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement toString()"); }
+    public double area() { 
+        return Math.PI * radius * radius;
+    }
+
 
     @Override
-    public boolean equals(Object o){ 
-        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-        throw new UnsupportedOperationException("TODO: implement equals(Object)"); }
+    public String toString() { 
+        double area = this.area();
+        return "Radius: " + radius + " Area: " + area;        
+    }
+
+    @Override
+    public boolean equals(Object o) { 
+        if (this == o) {
+            return true;
+        }
+
+        if(!(o instanceof Circle)) {
+            return false;
+        }
+
+        Circle other = (Circle) o;
+
+        return this.radius == other.radius;
+        
+    }
 }

@@ -19,24 +19,39 @@
 package fi.viikko2.task01;
 
 public class Person {
+    private String name;
+    private int age;
 
+    Person(String n, int a) {
+        this.name = n;
+        this.age = a;
+    }
 
+    Person(String n) {
+        this.name = n;
+        this.age = 0;
+    }
 
+    public int birthday() {
+        this.age += 1;
+        return age;
+    }
 
-   
+    @Override
+    public String toString() {
+        return ("Name: " + this.name + ". Age: " + this.age);
+        //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
+        
+    }
 
-@Override
-public String toString() {
-    //  Toteuta ja palauta merkkijono. Kun olet valmis, POISTA alla oleva rivi.
-    throw new UnsupportedOperationException("TODO: implement toString()");
+    @Override
+    public boolean equals(Object o) {
+        //  Toteuta equals. Kun olet valmis, POISTA alla oleva rivi.
 
-}
-
-@Override
-public boolean equals(Object o) {
-    //  Toteuta equals. Kun olet valmis, POISTA alla oleva rivi.
-    throw new UnsupportedOperationException("TODO: implement equals(Object)");
-
-}
-
+        if (this == o) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
